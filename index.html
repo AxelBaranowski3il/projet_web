@@ -36,6 +36,76 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap" async defer></script>
+  <style>
+    /* Style pour définir la taille de la carte */
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+
+  <div id="map"></div>
+
+  <script>
+    // Fonction d'initialisation de la carte
+    function initMap() {
+      // Coordonnées de l'emplacement que vous souhaitez afficher
+      var myLatLng = { lat: 48.8566, lng: 2.3522 }; // Exemple : Paris
+
+      // Options de la carte
+      var mapOptions = {
+        center: myLatLng,
+        zoom: 10 // Niveau de zoom initial
+      };
+
+      // Créez une instance de carte Google Maps
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+      // Créez un marqueur pour l'emplacement spécifié
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Emplacement'
+      });
+    }
+  </script>
 </body>
+
+<footer>
+  <div class="contact-info">
+    <h3>Coordonnées</h3>
+    <p>Gite Figuies</p>
+    <p>Adresse : 140 rue de Figuiès</p>
+    <p>12330 Salles-la-Source</p>
+    <p>Téléphone : +33(0)6 41 57 73 20</p>
+    <p>Email : beatrice.boyer29@orange.fr</p>
+  </div>
+  <div class="social-media">
+    <h3>Réseaux Sociaux</h3>
+    <ul>
+      <li><a href="https://www.facebook.com/gitefiguies" target="_blank">Facebook</a></li>
+      <li><a href="https://twitter.com/votrecomptetwitter" target="_blank">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/votreprofillinkedin" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/votrecompteinstagram" target="_blank">Instagram</a></li>
+    </ul>
+  </div>
+
+  <div class="partners">
+    <h3>Partenaires</h3>
+    <ul>
+      <li><a href="/pdf/tourisme-handicap.pdf" data-target="_blank"><img src="/img/logo-handicap.png" alt="Logo Tourisme et Handicap"></a></li>
+      <li><a href="/pdf/vignobles-decouvertes.pdf" data-target="_blank"><img src="/img/logo-vignobles.png" alt="Logo Vignobles et Découvertes"></a></li>
+      <li><a href="http://www.europe-en-france.gouv.fr/L-Europe-s-engage/Fonds-europeens-2014-2020/Politique-de-developpement-rural/FEADER" data-target="_blank"><img src="/img/logo-europe-projet.png" alt="Logo du fonds européen agricole pour le développement rural (FEADER)"></a></li>
+      <li><a href="http://www.les-plus-beaux-villages-de-france.org/fr/conques-0" data-target="_blank"><img src="/img/logo-beauxvillages.png" alt="Logo Les Plus Beaux Villages de France"></a></li>
+      <li><a href="http://www.cc-conques-marcillac.fr" data-target="_blank"><img src="/img/logo-cc-conques.jpg" alt="Logo Communauté de Communes de Conques-Marcillac"></a></li>
+      <li><a href="http://www.itervitis.fr" data-target="_blank"><img src="/img/logo-iter-vitis.jpg" alt="Logo Iter Vitis"></a></li>
+      <li><a href="http://www.chemins-compostelle.com/les-patrimoines-de-lunesco" data-target="_blank"><img src="/img/logo-unesco.png" alt="Logo de l'UNESCO"></a></li>
+      <li><a href="https://aveyron.fr/" data-target="_blank"><img src="/img/logo-aveyron.png" alt="Logo de l'Aveyron"></a></li>
+    </ul>
+
+  </div>
+</footer>
 
 </html>
