@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/login.css">
   <link rel="icon" type="image/png" href="img/cadenas.png" />
 
 </head>
 <body>
-<h2>Login</h2>
-<form method="post" action="auth.php">
-  <label for="username">Nom d'utilisateur :</label>
-  <input type="text" id="username" name="username" required><br><br>
+<div class="container">
+  <h2 id="titre_login">Login</h2>
+  <form method="post" action="auth.php">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" name="username" required><br><br>
 
-  <label for="password">Mot de passe :</label>
-  <input type="password" id="password" name="password" required><br><br>
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required><br><br>
 
-  <input type="submit" value="Se Connecter">
-</form>
+    <input type="submit" value="Se Connecter">
+  </form>
+</div>
 
 <?php
 $serveur = "localhost";
@@ -46,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($resultat->num_rows > 0) {
     $_SESSION[""] = $username;
-    die("connecté");
+    header("location: administration.php");
   } else {
     echo "<p>Identifiants incorrects. Veuillez réessayer.</p>";
   }
