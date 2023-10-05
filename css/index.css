@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#container_map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#map {
+  width: 80%;
+  height: 400px;
+}
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-size: 80%;
+  background: #7c0000;
+}
+
+footer h3 {
+  color: #bdbdbd;
+}
+
+footer p{
+  color: #6fceff;
+}
+
+.logo_part img {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+}
+
+.container_part {
+  display: flex;
+  justify-content: center;
+}
+
+.logo_res img {
+  width: 50px;
+  height: 50px;
+}
+
+#calendar {
+  width: 80%;
+  height: 400px;
+}

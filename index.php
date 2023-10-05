@@ -9,37 +9,41 @@
         crossorigin=""/>
   <link rel="icon" type="image/png" href="img/logo.png" />
 
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+
+  </script>
+
 </head>
 
 <body>
+
+  <div id='calendar'></div>
 
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-  <div id="map"></div>
-  <style>
-    /* Style pour définir la taille de la carte */
-    #map {
-      height: 400px;
-      width: 100%;
-    }
-  </style>
-
-
-
+  <div id="container_map">
+    <div id="map"></div>
+  </div>
   <script>
-
-
     const map = L.map('map').setView([44.44900, 2.49332], 15);
     var marker = L.marker([44.44900, 2.49332]).addTo(map);
+    marker.bindPopup("<b>Gite de figuies</b>").openPopup();
 
     const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-
-
   </script>
 </body>
 
@@ -54,26 +58,29 @@
   </div>
   <div class="social-media">
     <h3>Réseaux Sociaux</h3>
-    <ul>
-      <li><a href="https://www.facebook.com/gitefiguies" target="_blank">Facebook</a></li>
-      <li><a href="https://twitter.com/votrecomptetwitter" target="_blank">Twitter</a></li>
-      <li><a href="https://www.linkedin.com/in/votreprofillinkedin" target="_blank">LinkedIn</a></li>
-      <li><a href="https://www.instagram.com/votrecompteinstagram" target="_blank">Instagram</a></li>
-    </ul>
+    <div class="container_reseaux">
+      <a class="logo_res" href="https://www.facebook.com/gitefiguies" target="_blank"><img src="img/facebook.png"></a>
+      <a class="logo_res" href="https://twitter.com/votrecomptetwitter" target="_blank"><img src="img/twitter.svg"></a>
+      <a class="logo_res" href="https://www.linkedin.com/in/votreprofillinkedin" target="_blank"><img src="img/linkedin.png"></a>
+      <a class="logo_res" href="https://www.instagram.com/votrecompteinstagram" target="_blank"><img src="img/instagram.png"></a>
+    </div>
+
+
   </div>
 
   <div class="partners">
     <h3>Partenaires</h3>
-    <ul>
-      <li><a href="/pdf/tourisme-handicap.pdf" data-target="_blank"><img src="/img/logo-handicap.png" alt="Logo Tourisme et Handicap"></a></li>
-      <li><a href="/pdf/vignobles-decouvertes.pdf" data-target="_blank"><img src="/img/logo-vignobles.png" alt="Logo Vignobles et Découvertes"></a></li>
-      <li><a href="http://www.europe-en-france.gouv.fr/L-Europe-s-engage/Fonds-europeens-2014-2020/Politique-de-developpement-rural/FEADER" data-target="_blank"><img src="/img/logo-europe-projet.png" alt="Logo du fonds européen agricole pour le développement rural (FEADER)"></a></li>
-      <li><a href="http://www.les-plus-beaux-villages-de-france.org/fr/conques-0" data-target="_blank"><img src="/img/logo-beauxvillages.png" alt="Logo Les Plus Beaux Villages de France"></a></li>
-      <li><a href="http://www.cc-conques-marcillac.fr" data-target="_blank"><img src="/img/logo-cc-conques.jpg" alt="Logo Communauté de Communes de Conques-Marcillac"></a></li>
-      <li><a href="http://www.itervitis.fr" data-target="_blank"><img src="/img/logo-iter-vitis.jpg" alt="Logo Iter Vitis"></a></li>
-      <li><a href="http://www.chemins-compostelle.com/les-patrimoines-de-lunesco" data-target="_blank"><img src="/img/logo-unesco.png" alt="Logo de l'UNESCO"></a></li>
-      <li><a href="https://aveyron.fr/" data-target="_blank"><img src="/img/logo-aveyron.png" alt="Logo de l'Aveyron"></a></li>
-    </ul>
+    <div class="container_part">
+      <a class="logo_part" href="/pdf/tourisme-handicap.pdf" data-target="_blank"><img src="img/logo-handicap.png" alt="Logo Tourisme et Handicap"></a>
+      <a class="logo_part" href="/pdf/vignobles-decouvertes.pdf" data-target="_blank"><img src="img/logo-vignobles.png" alt="Logo Vignobles et Découvertes"></a>
+      <a class="logo_part" href="http://www.les-plus-beaux-villages-de-france.org/fr/conques-0" data-target="_blank"><img src="img/logo-beauxvillages.png" alt="Logo Les Plus Beaux Villages de France"></a>
+    </div>
+    <div class="container_part">
+      <a class="logo_part" href="http://www.cc-conques-marcillac.fr" data-target="_blank"><img src="img/logo-cc-conques.jpg" alt="Logo Communauté de Communes de Conques-Marcillac"></a>
+      <a class="logo_part" href="http://www.itervitis.fr" data-target="_blank"><img src="img/logo-iter-vitis.jpg" alt="Logo Iter Vitis"></a>
+      <a class="logo_part" href="https://aveyron.fr/" data-target="_blank"><img src="img/logo-aveyron.png" alt="Logo de l'Aveyron"></a>
+    </div>
+
 
   </div>
 </footer>
