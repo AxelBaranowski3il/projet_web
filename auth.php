@@ -10,7 +10,7 @@
 <body>
 <div class="container">
   <h2 id="titre_login">Login</h2>
-  <form method="post" action="auth.php">
+  <form method="post" action="administration.php">
     <label for="username">Nom d'utilisateur :</label>
     <input type="text" id="username" name="username" required><br><br>
 
@@ -22,6 +22,7 @@
 </div>
 
 <?php
+session_start();
 $serveur = "localhost";
 $utilisateur = "root";
 $motdepasse = "";
@@ -39,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $password = $_POST['password'];
 
 
+
   $requete = $connexion->prepare("SELECT * FROM user WHERE login = ? AND passwd = ?");
   $requete->bind_param("ss", $username, $password);
 
@@ -47,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $resultat = $requete->get_result();
 
   if ($resultat->num_rows > 0) {
-    $_SESSION[""] = $username;
+    $_SESSION['username'] = $username;
     header("location: administration.php");
   } else {
     echo "<p>Identifiants incorrects. Veuillez réessayer.</p>";
