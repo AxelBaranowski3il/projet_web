@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <title>Gite de </title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
   <link rel="icon" type="image/png" href="img/logo.png" />
 
 </head>
@@ -11,8 +14,10 @@
 <body>
 
 
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap" async defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+  <div id="map"></div>
   <style>
     /* Style pour définir la taille de la carte */
     #map {
@@ -21,30 +26,20 @@
     }
   </style>
 
-  <div id="map"></div>
+
 
   <script>
-    // Fonction d'initialisation de la carte
-    function initMap() {
-      // Coordonnées de l'emplacement que vous souhaitez afficher
-      var myLatLng = { lat: 48.8566, lng: 2.3522 }; // Exemple : Paris
 
-      // Options de la carte
-      var mapOptions = {
-        center: myLatLng,
-        zoom: 10 // Niveau de zoom initial
-      };
 
-      // Créez une instance de carte Google Maps
-      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    const map = L.map('map').setView([44.44900, 2.49332], 15);
+    var marker = L.marker([44.44900, 2.49332]).addTo(map);
 
-      // Créez un marqueur pour l'emplacement spécifié
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'Emplacement'
-      });
-    }
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+
   </script>
 </body>
 
