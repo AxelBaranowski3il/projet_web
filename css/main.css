@@ -1,0 +1,61 @@
+h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, textarea, span{
+  font-family: Calibri;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.bandeau-en-tete{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: bisque;
+}
+
+.bandeau-en-tete-titre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.bandeau-en-tete h1{
+  font-size: 35px;
+  text-align: center;
+}
+
+.menu{
+  position: fixed;
+  top: 70px;
+  left: 0px;
+  right: 0px;
+  height: 25px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #EED3B3FF;
+}
+
+.menu span{
+  padding: 10px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+
+.visu img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#description{
+  width: 80%;
+  justify-content: normal;
+}
