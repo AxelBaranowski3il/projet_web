@@ -23,6 +23,8 @@
 
 <?php
 session_start();
+setcookie("user", "Ax", time()+300);
+
 $serveur = "localhost";
 $utilisateur = "root";
 $motdepasse = "";
@@ -49,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $resultat = $requete->get_result();
 
   if ($resultat->num_rows > 0) {
-    $_SESSION['username'] = $username;
     header("location: administration.php");
   } else {
     echo "<p>Identifiants incorrects. Veuillez réessayer.</p>";

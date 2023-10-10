@@ -4,23 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Figuiès - Gîte</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
   <link rel="icon" href="img/LOGO-final-fond-transparent.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-
-
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -50,7 +35,7 @@
       <div class="bandeau-en-tete-titre">
         <h1>Figuiès</h1>
       </div>
-        <a href="">Se connecter</a>
+        <a href="auth.php">Se connecter</a>
     </div>
 
     <nav class="menu">
@@ -119,15 +104,25 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-  <div id='calendar'></div>
 
+</body>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="image1.jpg" alt="Image 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="image3.jpg" alt="Image 3">
+    </div>
+  </div>
+  <button id="prevBtn">Précédent</button>
+  <button id="nextBtn">Suivant</button>
+  <script src="js/carousel.js"></script>
+
+  <div id='calendar'></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
