@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Figuiès - Gîte</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="img/LOGO-final-fond-transparent.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <div class="bandeau-en-tete">
+      <img class="logo" src="img/LOGO-final-fond-transparent.png" alt="Logo du gite">
+      <div class="bandeau-en-tete-titre">
+        <h1>Figuiès</h1>
+      </div>
+        <a href="">Se connecter</a>
+    </div>
+
+    <nav class="menu">
+      <span><a href="#description">Le gîte</a></span>
+      <span>Infos clés</span>
+      <span>Disponibilités</span>
+      <span>Localisation</span>
+    </nav>
+  </header>
+
+  <section>
+    <div class="visu">
+      <img src="img/figuies2.jpg" alt="Vue d'ensemble du gite">
+    </div>
+
+    <div id="description">
+      <h2>Le gîte</h2>
+      <p>
+        Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
+
+        A 20 mn de Rodez, 10 mn de Marcillac et 30 mn de Conques, vous êtes idéalement situés pour visiter quelques un des sites naturels ou culturels remarquables de l'Aveyron.
+
+        Figuies est un hameau charmant, que l'on visite à pied. Une belle balade par un chemin, vous mènera de la cascade de la Roque, à celles de Salles-la source, en profitant de nombreux points de vue sur le paysage. On adore aussi le sentier à flanc de versant avec des passages en encorbellement creusé dans la roche ! Il nous fait pénétrer dans le paysage des falaises calcaires avec de beaux points de vue sur la vallée.  Vous êtes sur le GR 62 de Rodez à Conques.
+
+        Le gîte de Figuies,  d'une superficie de 75 m² sur deux niveaux, a été entièrement rénové en 2021. Une agréable décoration allie un style contemporain et des matériaux naturels comme le bois et le rotin.
+
+        Il se compose, au rez-de-chaussée d'une pièce lumineuse ouverte sur le paysage grâce à une grande baie vitrée.  De 35 m² et climatisée, cet espace offre une cuisine moderne bien équipée, un séjour et un coin salon chaleureux et cosys.
+
+        La terrasse plein sud, offre une vue imprenable sur la vallée que l'on peut contempler en prenant ses repas. Vous pourrez même admirer de superbes couchers du soleil.
+
+        A l'étage, vous disposerez de deux chambres mansardées et confortables. L'une avec un lit en 140/190 et l'autre avec deux lits en 90/190. Vous y trouverez aussi la salle de bain avec son WC.
+
+        Le jardin, très agréable, est non clos. Pourvu d'un bar extérieur, d'un barbecue, d'un évier et de mobilier de jardin, vous pourrez y prendre vos repas ou vous reposer à l'ombre de la glycine. Un WC et une douche complètent l'équipement.
+
+        Pour des vacances authentiques et au grand air, dans un lieu paisible à l'écart de la circulation, vous vous sentirez chez vous tout en étant dépaysé.
+      </p>
+
+    </div>
+
+    <div>
+      <h2>Tarifs 2023</h2>
+        <h3>Moyenne saison</h3>
+        <ul>
+          <li>Nuitée : 85€</li>
+          <li>Semaine : 550€</li>
+        </ul>
+        <h3>Haute saison</h3>
+        <ul>
+          <li>Nuitée : 110€</li>
+          <li>Semaine : 650€</li>
+        </ul>
+    </div>
+
+    <div>
+      <h2>Quelques informations</h2>
+      <ul>
+        <li>Capacité : 4</li>
+        <li>Nombre de chambres : 2</li>
+        <li>Animaux acceptés</li>
+        <li>Parking</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
