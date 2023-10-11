@@ -46,24 +46,26 @@
 
   <header>
     <div class="bandeau-en-tete">
-      <img class="logo" src="img/LOGO-final-fond-transparent.png" alt="Logo du gite">
-      <div class="bandeau-en-tete-titre">
+      <a href="#visu">
+        <img class="logo" src="img/LOGO-final-fond-transparent.png" alt="Logo du gite">
+      </a>
+        <div class="bandeau-en-tete-titre">
         <h1>Figuiès</h1>
       </div>
-        <a href="">Se connecter</a>
+        <a href="auth.php">Se connecter</a>
     </div>
 
     <nav class="menu">
-      <span><a href="#description">Le gîte</a></span>
-      <span>Infos clés</span>
-      <span>Disponibilités</span>
-      <span>Localisation</span>
+      <a href="#description">Le gîte</a>
+      <a href="#infos-cles">Infos clés</a>
+      <a href="#calendar">Disponibilités</a>
+      <a href="#container_map">Localisation</a>
     </nav>
   </header>
 
-  <section>
-    <div class="visu">
-      <img src="img/figuies2.jpg" alt="Vue d'ensemble du gite">
+  <div id="contenu">
+    <div id="visu">
+      <img src="img/figuies.jpeg" alt="Vue d'ensemble du gite">
     </div>
 
     <div id="description">
@@ -90,8 +92,9 @@
 
     </div>
 
-    <div>
-      <h2>Tarifs 2023</h2>
+    <div id="infos-cles">
+      <div class="tarifs">
+        <h2>Tarifs 2023</h2>
         <h3>Moyenne saison</h3>
         <ul>
           <li>Nuitée : 85€</li>
@@ -102,18 +105,18 @@
           <li>Nuitée : 110€</li>
           <li>Semaine : 650€</li>
         </ul>
+      </div>
+      <div class="infos-annexes">
+        <h2>Quelques informations</h2>
+        <ul>
+          <li>Capacité : 4</li>
+          <li>Nombre de chambres : 2</li>
+          <li>Animaux acceptés</li>
+          <li>Parking</li>
+        </ul>
+      </div>
     </div>
-
-    <div>
-      <h2>Quelques informations</h2>
-      <ul>
-        <li>Capacité : 4</li>
-        <li>Nombre de chambres : 2</li>
-        <li>Animaux acceptés</li>
-        <li>Parking</li>
-      </ul>
-    </div>
-  </section>
+  </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
@@ -125,9 +128,7 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
   <div id='calendar'></div>
-
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
