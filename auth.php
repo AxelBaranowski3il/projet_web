@@ -10,7 +10,7 @@
 <body>
 <div class="container">
   <h2 id="titre_login">Login</h2>
-  <form method="post" action="administration.php">
+  <form method="post" action="auth.php">
     <label for="username">Nom d'utilisateur :</label>
     <input type="text" id="username" name="username" required><br><br>
 
@@ -23,7 +23,6 @@
 
 <?php
 session_start();
-setcookie("user", "Ax", time()+300);
 
 $serveur = "localhost";
 $utilisateur = "root";
