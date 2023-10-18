@@ -97,12 +97,39 @@
         </ul>
       </div>
     </div>
+    <div class="carousel-container">
+      <div class="carousel">
+        <?php
+        $serveur = "localhost";
+        $utilisateur = "root";
+        $motdepasse = "";
+        $basededonnees = "projet_gite";
+
+        $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
+
+        if ($connexion->connect_error) {
+          die("La connexion à la base de données a échoué : " . $connexion->connect_error);
+        }
+        $resultatImages = $connexion->query("SELECT * FROM images");
+
+        while ($image = $resultatImages->fetch_assoc()) {
+          echo "<div class=\"carousel-slide\">";
+          echo "<img src=\"" . $image['nom_fichier'] . "\" alt=\"" . $image['nom_fichier'] . "\">";
+          echo "</div>";
+        }
+        ?>
+      </div>
+      <div class="carousel-boutons">
+        <button id="prevBtn">Précédent</button>
+        <button id="nextBtn">Suivant</button>
+      </div>
+      <script src="js/carousel.js"></script>
+    </div>
   </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
 
   <div id='calendar'></div>
 
