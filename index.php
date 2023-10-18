@@ -48,7 +48,7 @@
 
   <section>
     <div class="visu">
-      <img src="img/figuies2.jpg" alt="Vue d'ensemble du gite">
+      <img src="img/figuies-2.jpg" alt="Vue d'ensemble du gite">
     </div>
 
     <div id="description">

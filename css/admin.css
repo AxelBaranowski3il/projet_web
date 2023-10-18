@@ -111,3 +111,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.image_bdd {
+  width: 70px;
+}
+
+.image_bdd:hover{
+  width: 450px;
+}

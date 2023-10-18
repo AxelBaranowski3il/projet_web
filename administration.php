@@ -68,12 +68,19 @@
       ?>
     </table>
 
+
+    <h2>Ajouter une image</h2>
+    <form method="post" action="php/upload.php" enctype="multipart/form-data">
+      <label for="image">Sélectionnez une image :</label>
+      <input type="file" name="image" id="image" accept="image/*" required>
+      <button type="submit" name="upload">Envoyer l'image</button>
+    </form>
+
     <h2>Liste des images</h2>
     <table>
       <tr>
         <th>Image</th>
-        <th>Description</th>
-        <th>Date de création</th>
+        <th>Action</th>
       </tr>
       <?php
       $serveur = "localhost";
@@ -88,11 +95,36 @@
       }
       $resultatImages = $connexion->query("SELECT * FROM images");
 
+      if (isset($_GET['supprimer'])) {
+        $id = $_GET['supprimer'];
+
+        // Supprimer le fichier du serveur
+        $resultatImages = $connexion->query("SELECT nom_fichier FROM images WHERE id = $id");
+
+        if ($resultatImages->num_rows > 0) {
+          $image = $resultatImages->fetch_assoc();
+          $cheminFichier = "C:/xampp/htdocs/projet_web/" . $image['nom_fichier'];
+
+          if (file_exists($cheminFichier)) {
+            if (unlink($cheminFichier)) {
+              header("location: administration.php");
+            } else {
+              echo "Erreur lors de la suppression du fichier.";
+            }
+          } else {
+            echo "Le fichier n'existe pas.";
+          }
+        }
+
+        // Supprimer l'entrée de la base de données
+        $requete = $connexion->prepare("DELETE FROM images WHERE id = ?");
+        $requete->bind_param("s", $id);
+        $requete->execute();
+      }
       while ($image = $resultatImages->fetch_assoc()) {
         echo "<tr>";
-        echo "<td><img src='" . $image['nom_fichier'] . "' alt='Image'></td>";
-        echo "<td>" . $image['description'] . "</td>";
-        echo "<td>" . $image['date_creation'] . "</td>";
+        echo "<td><img class='image_bdd' src='" . $image['nom_fichier'] . "' alt='Image'></td>";
+        echo "<td><a href='administration.php?supprimer={$image['id']}'>Supprimer</a></td>";
         echo "</tr>";
       }
       ?>
