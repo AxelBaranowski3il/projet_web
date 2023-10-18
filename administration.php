@@ -70,6 +70,7 @@
 
 
     <h2>Ajouter une image</h2>
+
     <form method="post" action="php/upload.php" enctype="multipart/form-data">
       <label for="image">Sélectionnez une image :</label>
       <input type="file" name="image" id="image" accept="image/*" required>
@@ -129,6 +130,10 @@
       }
       ?>
     </table>
+
+
+
+
 
   </body>
 </div>
