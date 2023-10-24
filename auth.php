@@ -10,7 +10,7 @@
 <body>
 <div class="container">
   <div class="form_area">
-    <h2 id="titre_login">Login</h2>
+    <p class="title">Login</p>
     <form method="post" action="auth.php">
 
       <div class="form_group">

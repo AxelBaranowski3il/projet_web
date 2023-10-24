@@ -1,3 +1,26 @@
+body {
+  width: 100%;
+  height: 100%;
+  --s: 200px; /* control the size */
+  --c1: #977974;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+    from 30deg,
+    #0000 0 120deg,
+    var(--c3) 0 180deg
+  )
+  calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+  repeating-conic-gradient(
+    from 30deg,
+    var(--c1) 0 60deg,
+    var(--c2) 0 120deg,
+    var(--c3) 0 180deg
+  );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
 h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, textarea, span, a{
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -29,9 +52,6 @@ li{
   margin-bottom: 3px;
 }
 
-body{
-  background-color: #565a76;
-}
 
 .bandeau-en-tete{
   position: fixed;
