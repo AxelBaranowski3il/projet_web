@@ -1,7 +1,36 @@
-h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, textarea, span{
-  font-family: Calibri;
+h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, textarea, span, a{
+  font-family: Arial, sans-serif;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
+  color: white;
+}
+
+h1{
+  font-size: 36px;
+}
+
+h2{
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+li{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+body{
+  background-color: #565a76;
 }
 
 .bandeau-en-tete{
@@ -12,20 +41,14 @@ h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, te
   height: 50px;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
-  background-color: bisque;
-}
-
-.bandeau-en-tete-titre{
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-left: 20px;
+  background-color: #565a76;
+  z-index: 5;
 }
 
-.bandeau-en-tete h1{
-  font-size: 35px;
-  text-align: center;
+.bandeau-en-tete a{
+
 }
 
 .menu{
@@ -33,23 +56,27 @@ h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, te
   top: 70px;
   left: 0px;
   right: 0px;
-  height: 25px;
-  padding: 5px;
+  height: 40px;
   display: flex;
   justify-content: flex-start;
-  background-color: #EED3B3FF;
-}
-
-.menu span{
-  padding: 10px;
-  margin: 2px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: bisque;
+  background-color: #72789b;
+  z-index: 5;
 }
 
-.visu img{
+.menu a{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu a:hover{
+  background-color: #9B7278;
+}
+
+#visu img{
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -84,7 +111,22 @@ h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, te
   overflow: hidden; /* Cachez les images dépassant de la zone du carrousel */
 }
 
-#description{
-  width: 80%;
-  justify-content: normal;
+#carousel {
+  display: flex; /* Pour aligner les images horizontalement */
+  transition: transform 0.3s ease-in-out; /* Pour ajouter une transition en douceur lors du défilement */
+}
+
+#carousel img {
+  width: 300px; /* Ajustez la largeur à la taille souhaitée */
+  height: auto; /* Maintenez le rapport hauteur/largeur d'origine */
+}
+
+/* Ajustez la taille des boutons au besoin */
+#prev-btn, #next-btn {
+  width: 50px;
+  height: 30px;
+}
+
+.nom_gite {
+  color: black;
 }
