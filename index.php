@@ -4,13 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>Figuiès - Gîte</title>
+
   <link rel="icon" href="img/LOGO-final-fond-transparent.png">
+
   <link rel="stylesheet" href="css/main.css">
+
+
+
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""/>
-  <link rel="icon" type="image/png" href="img/logo.png" />
 
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
   <script>
@@ -31,52 +35,47 @@
 
   <header>
     <div class="bandeau-en-tete">
-      <img class="logo" src="img/LOGO-final-fond-transparent.png" alt="Logo du gite">
-      <div class="bandeau-en-tete-titre">
+      <a href="#visu">
+        <img class="logo" src="img/LOGO-final-fond-transparent.png" alt="Logo du gite">
+      </a>
+        <div class="bandeau-en-tete-titre">
         <h1>Figuiès</h1>
       </div>
         <a href="auth.php">Se connecter</a>
     </div>
 
     <nav class="menu">
-      <span><a href="#description">Le gîte</a></span>
-      <span>Infos clés</span>
-      <span>Disponibilités</span>
-      <span>Localisation</span>
+      <a href="#description">Le gîte</a>
+      <a href="#infos-cles">Infos clés</a>
+      <a href="#calendar">Disponibilités</a>
+      <a href="#container_map">Localisation</a>
     </nav>
   </header>
 
-  <section>
-    <div class="visu">
-      <img src="img/figuies-2.jpg" alt="Vue d'ensemble du gite">
+  <div id="contenu">
+    <div id="visu">
+      <img src="img/figuies.jpeg" alt="Vue d'ensemble du gite">
     </div>
 
     <div id="description">
       <h2>Le gîte</h2>
       <p>
         Notre maison en pierre, située sur les hauteurs, entre vignes, falaises et le causse vous séduira par sa vue magnifique et son environnement agréable.
-
         A 20 mn de Rodez, 10 mn de Marcillac et 30 mn de Conques, vous êtes idéalement situés pour visiter quelques un des sites naturels ou culturels remarquables de l'Aveyron.
-
         Figuies est un hameau charmant, que l'on visite à pied. Une belle balade par un chemin, vous mènera de la cascade de la Roque, à celles de Salles-la source, en profitant de nombreux points de vue sur le paysage. On adore aussi le sentier à flanc de versant avec des passages en encorbellement creusé dans la roche ! Il nous fait pénétrer dans le paysage des falaises calcaires avec de beaux points de vue sur la vallée.  Vous êtes sur le GR 62 de Rodez à Conques.
-
         Le gîte de Figuies,  d'une superficie de 75 m² sur deux niveaux, a été entièrement rénové en 2021. Une agréable décoration allie un style contemporain et des matériaux naturels comme le bois et le rotin.
-
         Il se compose, au rez-de-chaussée d'une pièce lumineuse ouverte sur le paysage grâce à une grande baie vitrée.  De 35 m² et climatisée, cet espace offre une cuisine moderne bien équipée, un séjour et un coin salon chaleureux et cosys.
-
         La terrasse plein sud, offre une vue imprenable sur la vallée que l'on peut contempler en prenant ses repas. Vous pourrez même admirer de superbes couchers du soleil.
-
         A l'étage, vous disposerez de deux chambres mansardées et confortables. L'une avec un lit en 140/190 et l'autre avec deux lits en 90/190. Vous y trouverez aussi la salle de bain avec son WC.
-
         Le jardin, très agréable, est non clos. Pourvu d'un bar extérieur, d'un barbecue, d'un évier et de mobilier de jardin, vous pourrez y prendre vos repas ou vous reposer à l'ombre de la glycine. Un WC et une douche complètent l'équipement.
-
         Pour des vacances authentiques et au grand air, dans un lieu paisible à l'écart de la circulation, vous vous sentirez chez vous tout en étant dépaysé.
       </p>
 
     </div>
 
-    <div>
-      <h2>Tarifs 2023</h2>
+    <div id="infos-cles">
+      <div class="tarifs">
+        <h2>Tarifs 2023</h2>
         <h3>Moyenne saison</h3>
         <ul>
           <li>Nuitée : 85€</li>
@@ -87,49 +86,59 @@
           <li>Nuitée : 110€</li>
           <li>Semaine : 650€</li>
         </ul>
+      </div>
+      <div class="infos-annexes">
+        <h2>Quelques informations</h2>
+        <ul>
+          <li>Capacité : 4</li>
+          <li>Nombre de chambres : 2</li>
+          <li>Animaux acceptés</li>
+          <li>Parking</li>
+        </ul>
+      </div>
     </div>
+    <div id="carousel-container">
+      <div id="carousel">
+        <?php
+        $serveur = "localhost";
+        $utilisateur = "root";
+        $motdepasse = "";
+        $basededonnees = "projet_gite";
 
-    <div>
-      <h2>Quelques informations</h2>
-      <ul>
-        <li>Capacité : 4</li>
-        <li>Nombre de chambres : 2</li>
-        <li>Animaux acceptés</li>
-        <li>Parking</li>
-      </ul>
+        $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
+
+        if ($connexion->connect_error) {
+          die("La connexion à la base de données a échoué : " . $connexion->connect_error);
+        }
+        $resultatImages = $connexion->query("SELECT * FROM images");
+
+        while ($image = $resultatImages->fetch_assoc()) {
+          echo "<div class=\"carousel-slide\">";
+          echo "<img src=\"" . $image['nom_fichier'] . "\" alt=\"" . $image['nom_fichier'] . "\">";
+          echo "</div>";
+        }
+        ?>
+      </div>
+      <button id="prevBtn">Précédent</button>
+      <button id="nextBtn">Suivant</button>
+      <script src="js/carousel.js"></script>
     </div>
-  </section>
+  </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
-
-</body>
-
-  <div class="carousel-container">
-    <div class="carousel-slide">
-      <img src="image1.jpg" alt="Image 1">
-    </div>
-    <div class="carousel-slide">
-      <img src="image2.jpg" alt="Image 2">
-    </div>
-    <div class="carousel-slide">
-      <img src="image3.jpg" alt="Image 3">
-    </div>
-  </div>
-  <button id="prevBtn">Précédent</button>
-  <button id="nextBtn">Suivant</button>
-  <script src="js/carousel.js"></script>
 
   <div id='calendar'></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
+
   <div id="container_map">
     <div id="map"></div>
   </div>
+
   <script>
     const map = L.map('map').setView([44.44900, 2.49332], 15);
     var marker = L.marker([44.44900, 2.49332]).addTo(map);

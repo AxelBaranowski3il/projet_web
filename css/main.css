@@ -53,6 +53,35 @@ h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, te
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  margin-top: 110px;
+}
+
+#contenu{
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#description, #infos-cles, #calendar, #container_map{
+  scroll-margin-top: 114px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+#infos-cles{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#carousel-container {
+  width: 300px; /* Ajustez la largeur à la taille souhaitée */
+  margin: 0 auto; /* Pour centrer le carrousel horizontalement */
+  overflow: hidden; /* Cachez les images dépassant de la zone du carrousel */
 }
 
 #description{

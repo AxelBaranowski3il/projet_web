@@ -1,23 +1,44 @@
-const carouselContainer = document.querySelector('.carousel-container');
-const slides = document.querySelectorAll('.carousel-slide');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-let currentIndex = 0;
+// Sélectionnez les éléments du carrousel
+const carouselContainer = document.getElementById('carousel-container');
+const carousel = document.getElementById('carousel');
+const prevButton = document.getElementById('prev-btn');
+const nextButton = document.getElementById('next-btn');
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(${100 * (i - index)}%)`;
+// Initialisez l'index de l'image actuelle
+let currentImageIndex = 0;
+
+// Écoutez les clics sur les boutons précédent et suivant
+prevButton.addEventListener('click', () => {
+  showImage(currentImageIndex - 1);
+});
+
+nextButton.addEventListener('click', () => {
+  showImage(currentImageIndex + 1);
+});
+
+// Fonction pour afficher l'image en fonction de l'index
+function showImage(index) {
+  const images = carousel.querySelectorAll('img');
+  if (index < 0) {
+    currentImageIndex = images.length - 1;
+  } else if (index >= images.length) {
+    currentImageIndex = 0;
+  } else {
+    currentImageIndex = index;
+  }
+
+  // Utilisez la propriété transform pour déplacer les images horizontalement
+  carousel.style.transform = `translateX(-${currentImageIndex * 300}px)`; // 300px est la largeur de chaque image
+
+  // Mettez à jour les styles pour afficher la première image
+  images.forEach((img, i) => {
+    if (i === currentImageIndex) {
+      img.style.display = 'block';
+    } else {
+      img.style.display = 'none';
+    }
   });
 }
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
-});
-
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-});
-
-showSlide(currentIndex);
+// Affichez la première image au chargement de la page
+showImage(currentImageIndex);
