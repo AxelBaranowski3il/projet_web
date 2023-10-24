@@ -97,8 +97,8 @@
         </ul>
       </div>
     </div>
-    <div class="carousel-container">
-      <div class="carousel">
+    <div id="carousel-container">
+      <div id="carousel">
         <?php
         $serveur = "localhost";
         $utilisateur = "root";
@@ -119,10 +119,8 @@
         }
         ?>
       </div>
-      <div class="carousel-boutons">
-        <button id="prevBtn">Précédent</button>
-        <button id="nextBtn">Suivant</button>
-      </div>
+      <button id="prevBtn">Précédent</button>
+      <button id="nextBtn">Suivant</button>
       <script src="js/carousel.js"></script>
     </div>
   </div>

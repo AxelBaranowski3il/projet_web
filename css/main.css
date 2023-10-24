@@ -105,40 +105,24 @@ body{
   justify-content: space-evenly;
 }
 
-.carousel-container{
-  width: 50%;
+#carousel-container {
+  width: 300px; /* Ajustez la largeur à la taille souhaitée */
+  margin: 0 auto; /* Pour centrer le carrousel horizontalement */
+  overflow: hidden; /* Cachez les images dépassant de la zone du carrousel */
 }
 
-.carousel {
-  display: flex;
-  flex-wrap: nowrap;
-  position : relative;
-  overflow: hidden;
-  height: 50vh;
+#carousel {
+  display: flex; /* Pour aligner les images horizontalement */
+  transition: transform 0.3s ease-in-out; /* Pour ajouter une transition en douceur lors du défilement */
 }
 
-.carousel-slide {
-  flex: none;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
+#carousel img {
+  width: 300px; /* Ajustez la largeur à la taille souhaitée */
+  height: auto; /* Maintenez le rapport hauteur/largeur d'origine */
 }
 
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.carousel-boutons {
-  position: absolute;
-  z-index: 4;
-  left: 10%;
-  right: 10%;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.carousel-boutons button {
-  padding: 10px;
+/* Ajustez la taille des boutons au besoin */
+#prev-btn, #next-btn {
+  width: 50px;
+  height: 30px;
 }
