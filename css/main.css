@@ -106,23 +106,34 @@ body{
 }
 
 #carousel-container {
-  width: 300px; /* Ajustez la largeur à la taille souhaitée */
-  margin: 0 auto; /* Pour centrer le carrousel horizontalement */
-  overflow: hidden; /* Cachez les images dépassant de la zone du carrousel */
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 #carousel {
-  display: flex; /* Pour aligner les images horizontalement */
-  transition: transform 0.3s ease-in-out; /* Pour ajouter une transition en douceur lors du défilement */
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 #carousel img {
-  width: 300px; /* Ajustez la largeur à la taille souhaitée */
-  height: auto; /* Maintenez le rapport hauteur/largeur d'origine */
+  width: 100%;
+  max-height: 400px;
 }
 
-/* Ajustez la taille des boutons au besoin */
-#prev-btn, #next-btn {
-  width: 50px;
-  height: 30px;
+#prevBtn, #nextBtn {
+  width: 40px;
+  height: 100px;
+}
+
+#prevBtn {
+  order: -1;
 }

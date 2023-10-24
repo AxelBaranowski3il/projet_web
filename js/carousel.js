@@ -1,13 +1,13 @@
-// Sélectionnez les éléments du carrousel
+// Recuperation des elements du carrousel
 const carouselContainer = document.getElementById('carousel-container');
 const carousel = document.getElementById('carousel');
-const prevButton = document.getElementById('prev-btn');
-const nextButton = document.getElementById('next-btn');
+const prevButton = document.getElementById('prevBtn');
+const nextButton = document.getElementById('nextBtn');
 
-// Initialisez l'index de l'image actuelle
+// Initialisation
 let currentImageIndex = 0;
 
-// Écoutez les clics sur les boutons précédent et suivant
+// Ecoute des evenements de clic sur "Precedent" et "Suivant"
 prevButton.addEventListener('click', () => {
   showImage(currentImageIndex - 1);
 });
@@ -16,7 +16,7 @@ nextButton.addEventListener('click', () => {
   showImage(currentImageIndex + 1);
 });
 
-// Fonction pour afficher l'image en fonction de l'index
+// Affichage de l'image courante
 function showImage(index) {
   const images = carousel.querySelectorAll('img');
   if (index < 0) {
@@ -27,10 +27,7 @@ function showImage(index) {
     currentImageIndex = index;
   }
 
-  // Utilisez la propriété transform pour déplacer les images horizontalement
-  carousel.style.transform = `translateX(-${currentImageIndex * 300}px)`; // 300px est la largeur de chaque image
-
-  // Mettez à jour les styles pour afficher la première image
+  // Masquage des images non courantes
   images.forEach((img, i) => {
     if (i === currentImageIndex) {
       img.style.display = 'block';
@@ -40,5 +37,5 @@ function showImage(index) {
   });
 }
 
-// Affichez la première image au chargement de la page
+// Affichage de la premiere image
 showImage(currentImageIndex);

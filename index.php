@@ -119,8 +119,8 @@
         }
         ?>
       </div>
-      <button id="prevBtn">Précédent</button>
-      <button id="nextBtn">Suivant</button>
+      <button id="prevBtn"><</button>
+      <button id="nextBtn">></button>
       <script src="js/carousel.js"></script>
     </div>
   </div>
