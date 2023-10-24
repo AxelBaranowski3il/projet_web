@@ -1,0 +1,143 @@
+h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, textarea, span, a{
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+h1{
+  font-size: 36px;
+}
+
+h2{
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+li{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+body{
+  background-color: #565a76;
+}
+
+.bandeau-en-tete{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #565a76;
+  z-index: 5;
+}
+
+.bandeau-en-tete a{
+
+}
+
+.menu{
+  position: fixed;
+  top: 70px;
+  left: 0px;
+  right: 0px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #72789b;
+  z-index: 5;
+}
+
+.menu a{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu a:hover{
+  background-color: #9B7278;
+}
+
+#visu img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 110px;
+}
+
+#contenu{
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#description, #infos-cles, #calendar, #container_map{
+  scroll-margin-top: 114px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+#infos-cles{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#carousel-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#carousel {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#carousel img {
+  width: 100%;
+  max-height: 400px;
+}
+
+#prevBtn, #nextBtn {
+  width: 40px;
+  height: 100px;
+}
+
+#prevBtn {
+  order: -1;
+}
+
+.nom_gite {
+  color: black;
+}
