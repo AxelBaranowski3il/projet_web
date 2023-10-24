@@ -142,7 +142,7 @@
   <script>
     const map = L.map('map').setView([44.44900, 2.49332], 15);
     var marker = L.marker([44.44900, 2.49332]).addTo(map);
-    marker.bindPopup("<b>Gite de figuies</b>").openPopup();
+    marker.bindPopup("<b class='nom_gite'>Gite de figuies</b>").openPopup();
 
     const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,

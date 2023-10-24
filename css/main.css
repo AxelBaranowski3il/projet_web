@@ -137,3 +137,7 @@ body{
 #prevBtn {
   order: -1;
 }
+
+.nom_gite {
+  color: black;
+}
