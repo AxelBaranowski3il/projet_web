@@ -4,21 +4,28 @@
   <meta charset="utf-8">
   <title>Login</title>
   <link rel="stylesheet" href="css/login.css">
-  <link rel="icon" type="image/png" href="img/cadenas.png" />
+  <link rel="icon" href="img/LOGO-final-fond-transparent.png">
 
 </head>
 <body>
 <div class="container">
-  <h2 id="titre_login">Login</h2>
-  <form method="post" action="auth.php">
-    <label for="username">Nom d'utilisateur :</label>
-    <input type="text" id="username" name="username" required><br><br>
+  <div class="form_area">
+    <p class="title">Login</p>
+    <form method="post" action="auth.php">
 
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" name="password" required><br><br>
+      <div class="form_group">
+        <label for="username" class="sub_title">Nom d'utilisateur :</label>
+        <input type="text" id="username" name="username" class="form_style" required><br><br>
+      </div>
 
-    <input type="submit" value="Se Connecter">
-  </form>
+      <div class="form_group">
+        <label for="password" class="sub_title">Mot de passe :</label>
+        <input type="password" id="password" name="password" class="form_style" required><br><br>
+      </div>
+
+      <input type="submit" value="Se Connecter" class="btn">
+    </form>
+  </div>
 </div>
 
 <?php

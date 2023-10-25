@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Administration</title>
   <link rel="stylesheet" href="css/admin.css">
-  <link rel="icon" type="image/png" href="img/admin.png" />
+  <link rel="icon" href="img/LOGO-final-fond-transparent.png">
 
 </head>
 <body>
