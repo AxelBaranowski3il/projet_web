@@ -24,6 +24,11 @@
 <?php
 session_start();
 
+if (isset($_SESSION['user'])) {
+  header("location: administration.php");
+  exit();
+}
+
 $serveur = "localhost";
 $utilisateur = "root";
 $motdepasse = "";
@@ -50,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $resultat = $requete->get_result();
 
   if ($resultat->num_rows > 0) {
+    $_SESSION['user'] = $_POST['username'];
     header("location: administration.php");
   } else {
     echo "<p>Identifiants incorrects. Veuillez réessayer.</p>";

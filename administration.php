@@ -8,10 +8,18 @@
 
 </head>
 <body>
+  <?php
+    session_start();
+
+    if (!isset($_SESSION['user'])) {
+      header("location: auth.php");
+      exit();
+    }
+  ?>
   <div class="container_haut_de_page">
     <h1>Page d'administration</h1>
     <button class="btn_retour_acc"><a href="index.php">Retour accueil</a></button>
-    <button class="btn_retour_acc"><a href="auth.php">Deconnexion</a></button>
+    <button class="btn_retour_acc"><a href="php/deconnexion.php">Deconnexion</a></button>
   </div>
 
   <div class="container">
@@ -131,10 +139,5 @@
       ?>
     </table>
 
-
-
-
-
   </body>
-</div>
 </html>
