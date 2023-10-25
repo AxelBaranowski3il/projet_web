@@ -14,7 +14,7 @@ if (isset($_POST['upload'])) {
   if (isset($_FILES['image'])) {
     $imageNom = $_FILES['image']['name'];
     $imageCheminTemporaire = $_FILES['image']['tmp_name'];
-    $dossierImages = "C:/xampp/htdocs/projet_web/img/"; // Répertoire où vous stockerez les images
+    $dossierImages = getcwd() . "/img"; // Répertoire où vous stockerez les images
     $imageCheminFinal = $dossierImages . $imageNom;
 
     if (move_uploaded_file($imageCheminTemporaire, $imageCheminFinal)) {
