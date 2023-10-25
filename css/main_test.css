@@ -91,23 +91,107 @@ body {
 
 }
 
-#visu img{
+.contenu_total{
+  background-color: #4e4f51;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#visu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   height: auto;
-  object-fit: cover;
-  margin-top: 110px;
+  margin-top: 5px;
+  background-color: white;
+}
+#visu img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.texte_desc{
+  color: white;
+}
+
+/** test texte */
+
+#description {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#description h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 20px;
+}
+
+#description p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/** test liste a puce */
+#infos-cles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tarifs, .infos-annexes {
+  background-color: #eddcd9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  flex: 1;
+}
+
+#infos-cles h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+#infos-cles h3 {
+  font-size: 20px;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+#infos-cles ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#infos-cles li {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+#infos-cles .tarifs ul {
+  border-left: 3px solid #de5499;
+  padding-left: 10px;
+}
+
+#infos-cles .infos-annexes ul {
+  border-left: 3px solid #de5499;
+  padding-left: 10px;
 }
 
 #contenu{
   display:flex;
   flex-direction: column;
-  gap: 30px;
 }
 
 #description, #infos-cles, #calendar, #container_map{
   scroll-margin-top: 114px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .logo{
