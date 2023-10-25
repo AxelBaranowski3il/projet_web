@@ -97,8 +97,23 @@ body {
   opacity: .9;
 }
 
-.link {
+
+.btn_return {
+  padding: 0px;
+  margin: 9px 0px;
+  width: 175px;
+  font-size: 15px;
+  background: #DE5499;
+  border-radius: 10px;
   font-weight: 800;
-  color: #264143;
-  padding: 5px;
+  box-shadow: 3px 3px 0px 0px #E99F4C;
+}
+
+.btn_return:hover {
+  opacity: .9;
+}
+
+.btn_return a {
+  color: black;
+  text-decoration: none;
 }

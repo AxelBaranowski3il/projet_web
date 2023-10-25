@@ -21,36 +21,7 @@ body {
   background-size: var(--s) calc(var(--s) * 0.577);
 }
 
-h1, h2, h3, h4, h5, div, p, li, td, th, input, button, label, select, option, textarea, span, a{
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: white;
-}
 
-h1{
-  font-size: 36px;
-}
-
-h2{
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-h3{
-  font-size: 20px;
-  margin-bottom: 10px;
-  margin-left: 15px;
-}
-
-ul{
-  margin-left: 50px;
-}
-
-li{
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
 
 
 .bandeau-en-tete{
@@ -58,29 +29,50 @@ li{
   top: 0px;
   right: 0px;
   left: 0px;
-  height: 50px;
+  height: 100px;
   padding: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #565a76;
+  background-color: #EDDCD9;
   z-index: 5;
 }
 
-.bandeau-en-tete a{
+.btn {
+  padding: 0px;
+  margin: 25px 0px;
+  width: 135px;
+  font-size: 15px;
+  background: #DE5499;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 3px 3px 0px 0px #000000
+}
 
+.btn:hover {
+  opacity: .9;
+}
+
+.btn a {
+  color: black;
+  text-decoration: none;
+}
+
+.bandeau-en-tete-titre {
+  color: #1c1c1c;
+  font-size: 30px;
 }
 
 .menu{
   position: fixed;
-  top: 70px;
+  top: 120px;
   left: 0px;
   right: 0px;
   height: 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #72789b;
+  background-color: #000000;
   z-index: 5;
 }
 
@@ -90,10 +82,13 @@ li{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  color: white;
 }
 
 .menu a:hover{
-  background-color: #9B7278;
+  background-color: #DE5499;
+  border-radius: 10px;
+
 }
 
 #visu img{
@@ -116,8 +111,8 @@ li{
 }
 
 .logo{
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 #infos-cles{
@@ -161,3 +156,5 @@ li{
 .nom_gite {
   color: black;
 }
+
+
