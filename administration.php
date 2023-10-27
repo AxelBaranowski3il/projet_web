@@ -112,7 +112,7 @@
 
         if ($resultatImages->num_rows > 0) {
           $image = $resultatImages->fetch_assoc();
-          $cheminFichier = "C:/xampp/htdocs/projet_web/" . $image['nom_fichier'];
+          $cheminFichier = getcwd() . "/img" . $image['nom_fichier'];
 
           if (file_exists($cheminFichier)) {
             if (unlink($cheminFichier)) {

@@ -41,7 +41,7 @@
         <div class="bandeau-en-tete-titre">
         <h1>Figuiès</h1>
       </div>
-        <button class="btn"><a href="auth.php">Se connecter</a></button>
+      <a href="auth.php"><button class="btn">Se connecter</button></a>
     </div>
 
     <nav class="menu">
