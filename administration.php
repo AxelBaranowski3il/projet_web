@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="css/admin.css">
   <link rel="icon" href="img/LOGO-final-fond-transparent.png">
 
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+  <script src='js/calendar.js'></script>
 </head>
 <body>
   <?php
@@ -138,6 +140,56 @@
       }
       ?>
     </table>
+
+    <div id='calendar'></div>
+
+    <div id="container-form-choix-dates">
+      <h2>Modifier des disponibilités</h2>
+      <form id="form-choix-dates" method="post" action="php/changeDates.php">
+        <label>
+          De : <input type="date" name="dateDebut" required>
+        </label>
+        <label>
+          A : <input type="date" name="dateFin" required>
+        </label>
+        <label>
+          Changer en : <select name="option" required>
+            <option>Réservé</option>
+            <option>Libre</option>
+          </select>
+        </label>
+        <input type="submit" value="Enregistrer">
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("form-choix-dates").addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          var formData = new FormData(this);
+
+          var xhr = new XMLHttpRequest();
+
+          xhr.open("POST", "php/changeDates.php", true);
+
+          xhr.onload = function() {
+            if (xhr.status === 200) {
+              var response = xhr.responseText;
+              alert("Réponse du serveur : " + response);
+            } else {
+              console.log("Erreur : " + xhr.statusText);
+            }
+          };
+
+          xhr.onerror = function() {
+            console.log("Erreur de réseau lors de la requête.");
+          };
+
+          xhr.send(formData);
+        });
+      });
+    </script>
 
   </body>
 </html>
