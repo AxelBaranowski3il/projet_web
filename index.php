@@ -7,7 +7,7 @@
 
   <link rel="icon" href="img/LOGO-final-fond-transparent.png">
 
-  <link rel="stylesheet" href="css/main_test.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
 
@@ -51,8 +51,11 @@
       <a href="#container_map">Localisation</a>
     </nav>
   </header>
+  <div class="typewriter-text">
+    Bienvenue sur le Gite de Figuiès !
+  </div>
   <div id="visu">
-    <img src="img/piscine.jpg">
+    <img src="img/cascade.jpg">
   </div>
   <div class="contenu_total">
     <div id="contenu">
@@ -166,7 +169,7 @@
     <h3>Réseaux Sociaux</h3>
     <div class="container_reseaux">
       <a class="logo_res" href="https://www.facebook.com/gitefiguies" target="_blank"><img src="img/facebook.png"></a>
-      <a class="logo_res" href="https://twitter.com/votrecomptetwitter" target="_blank"><img src="img/twitter.svg"></a>
+      <a class="logo_res" href="https://twitter.com/votrecomptetwitter" target="_blank"><img src="img/twitter.png"></a>
       <a class="logo_res" href="https://www.linkedin.com/in/votreprofillinkedin" target="_blank"><img src="img/linkedin.png"></a>
       <a class="logo_res" href="https://www.instagram.com/votrecompteinstagram" target="_blank"><img src="img/instagram.png"></a>
     </div>
