@@ -18,7 +18,7 @@ if (isset($_POST['upload'])) {
     $imageCheminFinal = $dossierImages . $imageNom;
 
     if (move_uploaded_file($imageCheminTemporaire, $imageCheminFinal)) {
-      compresserImage($imageCheminFinal, $imageCheminFinal, 100);
+      compresserImage($imageCheminFinal, $imageCheminFinal, 50);
 
       // Enregistrer le chemin compressé dans la base de données
       $imageCheminFinal = "img/" . $imageNom;
