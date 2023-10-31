@@ -114,7 +114,7 @@
 
         if ($resultatImages->num_rows > 0) {
           $image = $resultatImages->fetch_assoc();
-          $cheminFichier = getcwd() . "/img" . $image['nom_fichier'];
+          $cheminFichier = $image['nom_fichier'];
 
           if (file_exists($cheminFichier)) {
             if (unlink($cheminFichier)) {
@@ -123,7 +123,7 @@
               echo "Erreur lors de la suppression du fichier.";
             }
           } else {
-            echo "Le fichier n'existe pas.";
+            echo "Le fichier " . $cheminFichier  ."n'existe pas.";
           }
         }
 
