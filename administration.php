@@ -123,7 +123,7 @@
               echo "Erreur lors de la suppression du fichier.";
             }
           } else {
-            echo "Le fichier " . $cheminFichier  ."n'existe pas.";
+            echo "Le fichier " . $cheminFichier  ." n'existe pas.";
           }
         }
 
@@ -165,35 +165,5 @@
         <input type="submit" value="Enregistrer">
       </form>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("form-choix-dates").addEventListener("submit", function(event) {
-          event.preventDefault();
-
-          var formData = new FormData(this);
-
-          var xhr = new XMLHttpRequest();
-
-          xhr.open("POST", "php/changeDates.php", true);
-
-          xhr.onload = function() {
-            if (xhr.status === 200) {
-              var response = xhr.responseText;
-              alert("Réponse du serveur : " + response);
-            } else {
-              console.log("Erreur : " + xhr.statusText);
-            }
-          };
-
-          xhr.onerror = function() {
-            console.log("Erreur de réseau lors de la requête.");
-          };
-
-          xhr.send(formData);
-        });
-      });
-    </script>
-
   </body>
 </html>

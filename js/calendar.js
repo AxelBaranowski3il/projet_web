@@ -1,4 +1,35 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
+  loadCalendar();
+} );
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("form-choix-dates").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "php/changeDates.php", true);
+
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        loadCalendar();
+      } else {
+        console.log("Erreur : " + xhr.statusText);
+      }
+    };
+
+    xhr.onerror = function() {
+      console.log("Erreur de réseau lors de la requête.");
+    };
+
+    xhr.send(formData);
+  });
+});
+
+
+function loadCalendar () {
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
@@ -23,9 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var reserv = reservation.date;
 
         calendar.addEvent({
-          start: reserv,
-          rendering: 'background',
-          color: 'lightblue'
+          start: reserv
         });
       });
 
@@ -41,4 +70,5 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   xhr.send();
-});
+}
+
