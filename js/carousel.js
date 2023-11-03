@@ -1,8 +1,24 @@
 // Recuperation des elements du carrousel
 const carouselContainer = document.getElementById('carousel-container');
 const carousel = document.getElementById('carousel');
+const images = carousel.querySelectorAll('img');
 const prevButton = document.getElementById('prevBtn');
 const nextButton = document.getElementById('nextBtn');
+
+// Lazy loading
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const image = entry.target;
+      image.src = image.getAttribute('data-src');
+      observer.unobserve(image);
+    }
+  });
+});
+
+images.forEach((image) => {
+  observer.observe(image);
+})
 
 // Initialisation
 let currentImageIndex = 0;

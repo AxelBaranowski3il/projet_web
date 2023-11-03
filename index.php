@@ -107,7 +107,7 @@
 
           while ($image = $resultatImages->fetch_assoc()) {
             echo "<div class=\"carousel-slide\">";
-            echo "<img src=\"" . $image['nom_fichier'] . "\" alt=\"" . $image['nom_fichier'] . "\">";
+            echo "<img data-src=\"" . $image['nom_fichier'] . "\" alt=\"" . $image['nom_fichier'] . "\">";
             echo "</div>";
           }
           ?>
