@@ -220,7 +220,7 @@ body {
 }
 
 #description, #infos-cles, #calendar, #container_map{
-  scroll-margin-top: 114px;
+  scroll-margin-top: 160px;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -305,8 +305,8 @@ body {
   --fc-button-hover-border-color: #1a252f;
   --fc-button-active-bg-color: #1a252f;
   --fc-button-active-border-color: #151e27;
-  --fc-event-bg-color: #3788d8;
-  --fc-event-border-color: #3788d8;
+  --fc-event-bg-color: #2c7d2c;
+  --fc-event-border-color: #2c7d2c;
   --fc-event-text-color: #fff;
   --fc-event-selected-overlay-color: rgba(0,0,0,.25);
   --fc-more-link-bg-color: #d0d0d0;
@@ -326,6 +326,8 @@ body {
   color: #eddcd9;
 }
 
-/* bouton calendrier css */
+.contact-info a {
+  color: #656565;
+}
 
 

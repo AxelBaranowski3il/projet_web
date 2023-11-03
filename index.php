@@ -152,7 +152,7 @@
     <p>Adresse : 140 rue de Figuiès</p>
     <p>12330 Salles-la-Source</p>
     <p>Téléphone : +33(0)6 41 57 73 20</p>
-    <p>Email : beatrice.boyer29@orange.fr</p>
+    <p>Email : <a href="mailto:beatrice.boyer29@orange.fr" >beatrice.boyer29@orange.fr</a></p>
   </div>
   <div class="social-media">
     <h3>Réseaux Sociaux</h3>
