@@ -133,10 +133,6 @@
         $requete->execute();
       }
       while ($image = $resultatImages->fetch_assoc()) {
-
-
-
-
         echo "<tr>";
         echo "<td><img class='image_bdd' src='" . $image['nom_fichier'] . "' alt='Image'></td>";
         echo "<td><a href='administration.php?supprimer={$image['id']}'>Supprimer</a></td>";
