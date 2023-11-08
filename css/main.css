@@ -305,7 +305,7 @@ body {
   --fc-button-hover-border-color: #1a252f;
   --fc-button-active-bg-color: #1a252f;
   --fc-button-active-border-color: #151e27;
-  --fc-event-bg-color: #2c7d2c;
+  --fc-event-bg-color: #ff0000;
   --fc-event-border-color: #2c7d2c;
   --fc-event-text-color: #fff;
   --fc-event-selected-overlay-color: rgba(0,0,0,.25);
@@ -330,4 +330,23 @@ body {
   color: #656565;
 }
 
+.espace_reserve{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.espace_reserve p{
+  color: white;
+  padding: 10px;
+  margin: 25px 5px;
+  font-size: 15px;
+  background: #ff0000;
+  border-radius: 20px;
+  font-weight: 800;
+}
+
+.espace_reserve h3 {
+  color: white;
+}
 

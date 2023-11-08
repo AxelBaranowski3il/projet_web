@@ -121,6 +121,11 @@
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
 
+    <div class="espace_reserve">
+      <h3>Legende : </h3>
+      <p>Réservé</p>
+    </div>
+
     <div id='calendar'></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
