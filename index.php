@@ -80,7 +80,7 @@
             </ul>
           </div>
           <div class="infos-annexes">
-            <h2>Quelques informations</h2>
+            <h2>Informations</h2>
             <ul>
               <li>Capacité : 4</li>
               <li>Nombre de chambres : 2</li>
@@ -93,10 +93,10 @@
       <div id="carousel-container">
         <div id="carousel">
           <?php
-          $serveur = "localhost";
-          $utilisateur = "root";
-          $motdepasse = "";
-          $basededonnees = "projet_gite";
+          $serveur = "mysql-kylan3il.alwaysdata.net";
+          $utilisateur = "kylan3il";
+          $motdepasse = "tmWs5p74D35RN!v";
+          $basededonnees = "kylan3il_projet_gite";
 
           $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
 
@@ -163,8 +163,6 @@
       <a class="logo_res" href="https://www.linkedin.com/in/votreprofillinkedin" target="_blank"><img src="img/linkedin.png"></a>
       <a class="logo_res" href="https://www.instagram.com/votrecompteinstagram" target="_blank"><img src="img/instagram.png"></a>
     </div>
-
-
   </div>
 
   <div class="partners">
@@ -179,8 +177,6 @@
       <a class="logo_part" href="http://www.itervitis.fr" data-target="_blank"><img src="img/logo-iter-vitis.jpg" alt="Logo Iter Vitis"></a>
       <a class="logo_part" href="https://aveyron.fr/" data-target="_blank"><img src="img/logo-aveyron.png" alt="Logo de l'Aveyron"></a>
     </div>
-
-
   </div>
 </footer>
 

@@ -1,9 +1,9 @@
 <?php
 
-$serveur = "localhost";
-$utilisateur = "root";
-$motdepasse = "";
-$basededonnees = "projet_gite";
+$serveur = "mysql-kylan3il.alwaysdata.net";
+$utilisateur = "kylan3il";
+$motdepasse = "tmWs5p74D35RN!v";
+$basededonnees = "kylan3il_projet_gite";
 
 $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
 

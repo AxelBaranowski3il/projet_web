@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : mar. 24 oct. 2023 à 10:07
--- Version du serveur : 10.4.28-MariaDB
--- Version de PHP : 8.2.4
+-- Host: mysql-kylan3il.alwaysdata.net
+-- Generation Time: Nov 08, 2023 at 03:05 PM
+-- Server version: 10.6.14-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,35 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `projet_gite`
+-- Database: `kylan3il_projet_gite`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `images`
+-- Table structure for table `date_reserve`
+--
+
+CREATE TABLE `date_reserve` (
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `date_reserve`
+--
+
+INSERT INTO `date_reserve` (`date`) VALUES
+                                      ('2023-10-26'),
+                                      ('2023-10-27'),
+                                      ('2023-10-28'),
+                                      ('2023-10-29'),
+                                      ('2023-10-30'),
+                                      ('2023-11-10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
 --
 
 CREATE TABLE `images` (
@@ -35,25 +57,24 @@ CREATE TABLE `images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `images`
+-- Dumping data for table `images`
 --
 
 INSERT INTO `images` (`id`, `nom_fichier`, `description`, `date_creation`) VALUES
-                                                                             (5, 'img/figuies-5.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (6, 'img/figuies-6.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (7, 'img/figuies-7.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (8, 'img/figuies-8.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (9, 'img/figuies-9.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (10, 'img/figuies-10.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (11, 'img/figuies-11.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (12, 'img/figuies-12.jpg', ' ', '2023-10-18 12:50:25'),
-                                                                             (14, 'img/figuies-3.jpg', ' ', '2023-10-18 13:34:29'),
-                                                                             (15, 'img/figuies-4.jpg', ' ', '2023-10-18 13:34:29');
+                                                                             (14, 'img/figuies3.jpg', NULL, '2023-11-08 13:59:14'),
+                                                                             (15, 'img/figuies-3.jpg', NULL, '2023-11-08 13:59:22'),
+                                                                             (16, 'img/figuies-4.jpg', NULL, '2023-11-08 13:59:28'),
+                                                                             (17, 'img/figuies-5.jpg', NULL, '2023-11-08 13:59:33'),
+                                                                             (18, 'img/figuies-6.jpg', NULL, '2023-11-08 13:59:38'),
+                                                                             (19, 'img/figuies-9.jpg', NULL, '2023-11-08 13:59:48'),
+                                                                             (20, 'img/figuies-10.jpg', NULL, '2023-11-08 13:59:54'),
+                                                                             (21, 'img/figuies-11.jpg', NULL, '2023-11-08 14:00:01'),
+                                                                             (22, 'img/figuies-12.jpg', NULL, '2023-11-08 14:00:10');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -62,39 +83,43 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`login`, `passwd`) VALUES
-                                         ('admin', 'admin'),
-                                         ('axl', '123'),
-                                         ('kiki', '1234');
+  ('xmouly', '12345');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `images`
+-- Indexes for table `date_reserve`
+--
+ALTER TABLE `date_reserve`
+  ADD PRIMARY KEY (`date`);
+
+--
+-- Indexes for table `images`
 --
 ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`login`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `images`
+-- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

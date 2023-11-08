@@ -1,3 +1,7 @@
+h1, h2, h3, div, p, a, button, li {
+  font-family: Calibri;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -72,7 +76,7 @@ body {
   right: 0px;
   height: 40px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background-color: #000000;
   z-index: 5;
@@ -83,6 +87,7 @@ body {
   display: block;
   text-align: center;
   padding: 14px 16px;
+  margin: 0 15px 0 15px;
   text-decoration: none;
   color: white;
 }
@@ -90,10 +95,11 @@ body {
 .menu a:hover{
   background-color: #2c7d2c;
   border-radius: 10px;
-
 }
 
-
+.menu a.active {
+  background-color: #2c7d2c;
+}
 
 /* texte qui s'affiche lettre par lettre */
 @keyframes typewriter {
@@ -219,7 +225,7 @@ body {
 }
 
 #description, #infos-cles, #calendar, #container_map{
-  scroll-margin-top: 114px;
+  scroll-margin-top: 160px;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -287,6 +293,8 @@ body {
   padding-bottom: 7px;
   width: 80%;
   height: 100%;
+  margin-left: 10%;
+
 }
 
 :root {
